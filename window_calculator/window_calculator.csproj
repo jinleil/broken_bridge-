@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6FC87390-977D-4CA0-B738-A163AFB5D206}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>window_calculator</RootNamespace>
+    <AssemblyName>window_calculator</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Spire.License, Version=1.3.6.40, Culture=neutral, PublicKeyToken=b1144360237c8b3f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Spire.License.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.Pdf, Version=4.3.0.20040, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Spire.Pdf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite">
+      <HintPath>bin\Debug\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dgv.cs" />
+    <Compile Include="FormSelectType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSelectType.Designer.cs">
+      <DependentUpon>FormSelectType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="History.Designer.cs">
+      <DependentUpon>History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintPreview.Designer.cs">
+      <DependentUpon>PrintPreview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="WinType\BaseWinType.cs" />
+    <Compile Include="DataGridViewPrint.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSet.Designer.cs">
+      <DependentUpon>FormSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageUtil.cs" />
+    <Compile Include="Model.cs" />
+    <Compile Include="PrintPDF.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WinType\Type1.cs" />
+    <Compile Include="WinType\Type10.cs" />
+    <Compile Include="WinType\Type11.cs" />
+    <Compile Include="WinType\Type12.cs" />
+    <Compile Include="WinType\Type13.cs" />
+    <Compile Include="WinType\Type14.cs" />
+    <Compile Include="WinType\Type15.cs" />
+    <Compile Include="WinType\Type16.cs" />
+    <Compile Include="WinType\Type17.cs" />
+    <Compile Include="WinType\Type18.cs" />
+    <Compile Include="WinType\Type19.cs" />
+    <Compile Include="WinType\Type2.cs" />
+    <Compile Include="WinType\Type3.cs" />
+    <Compile Include="WinType\Type4.cs" />
+    <Compile Include="WinType\Type5.cs" />
+    <Compile Include="WinType\Type6.cs" />
+    <Compile Include="WinType\Type7.cs" />
+    <Compile Include="WinType\Type8.cs" />
+    <Compile Include="WinType\Type9.cs" />
+    <Compile Include="WinType\TypeFactory.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSelectType.resx">
+      <DependentUpon>FormSelectType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSet.resx">
+      <DependentUpon>FormSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="History.resx">
+      <DependentUpon>History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintPreview.resx">
+      <DependentUpon>PrintPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\19.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
